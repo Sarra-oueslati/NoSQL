@@ -58,7 +58,19 @@ function (doc) {
 #### Fonction Reduce  
 La fonction **Reduce** agrège les données regroupées par clé après la phase de tri. Elle permet de produire des résultats globaux comme des totaux, des moyennes ou des agrégations complexes.  
 - **Entrée** : Groupes de paires clé-valeur générées par la fonction Map.  
-- **Sortie** : Résultat agrégé pour chaque clé.  
+- **Sortie** : Résultat agrégé pour chaque clé.
+
+
+Exemple d’une fonction Reduce dans CouchDB :  
+
+```javascript
+function (keys, values, rereduce) {  
+  return values.length;  
+}
+```
+**Explication :**
+- Cette fonction compte le nombre de valeurs pour chaque clé (par exemple, le nombre de films par année).
+
 
 #### Génération de vues  
 CouchDB utilise des **vues** pour stocker et réutiliser les résultats de MapReduce.  
