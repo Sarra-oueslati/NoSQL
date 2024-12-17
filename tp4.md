@@ -1,5 +1,3 @@
----
-
 ### Présentation de CouchDB  
 
 **CouchDB** est une base de données NoSQL orientée document, soutenue par la Fondation Apache. Elle se distingue par sa simplicité d’installation, son utilisation intuitive via une API REST, et sa flexibilité en termes de structure des données.  
@@ -60,5 +58,3 @@ CouchDB utilise des **vues** pour stocker et réutiliser les résultats de MapRe
 - **Interopérabilité** : Les résultats des calculs sont exploitables directement via l’API REST.  
 
 Avec ces fonctionnalités, CouchDB s’impose comme un outil puissant pour gérer et interroger des données massives, tout en garantissant simplicité et évolutivité.  
-
---- 
