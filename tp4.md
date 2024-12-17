@@ -40,7 +40,20 @@ MapReduce est une technique initialement développée pour le traitement de donn
 #### Fonction Map  
 La fonction **Map** transforme les documents et produit des paires clé-valeur pour structurer les données.  
 - **Entrée** : Documents bruts depuis la base de données.  
-- **Sortie** : Une ou plusieurs paires clé-valeur, prêtes à être triées et regroupées.  
+- **Sortie** : Une ou plusieurs paires clé-valeur, prêtes à être triées et regroupées.
+  
+Exemple d’une fonction Map dans CouchDB :
+
+```javascript
+function (doc) {  
+  if (doc.type === "film") {  
+    emit(doc.year, doc.title);  
+  }  
+}
+```
+**Explication :**
+- Chaque document avec un type "film" émet une clé (année de sortie) et une valeur (titre du film).  
+
 
 #### Fonction Reduce  
 La fonction **Reduce** agrège les données regroupées par clé après la phase de tri. Elle permet de produire des résultats globaux comme des totaux, des moyennes ou des agrégations complexes.  
